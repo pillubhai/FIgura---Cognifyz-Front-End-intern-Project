@@ -81,6 +81,20 @@ ADDITIONAL FEATURES
 - Theme switcher: 4 color themes using CSS variables
 - Creator section: Aryan Anand Pilankar — Cognifyz Technologies
 
+WHAT I LEARNED
+--------------
+While building this project, I learned how the Fetch API works by loading
+products from FakeStore API and rendering them inside the page with JavaScript.
+
+I also practiced the async and await JavaScript concept. Earlier, API calls felt
+confusing, but using async/await helped me understand how to wait for the data
+before updating the UI.
+
+I faced some CSS styling issues while making the layout responsive, especially
+with the navbar, product cards, cart drawer, and mobile screen spacing. Fixing
+those parts helped me understand media queries, grids, spacing, and reusable
+CSS variables better.
+
 HOW TO RUN
 ----------
 1. Open index.html in any modern browser

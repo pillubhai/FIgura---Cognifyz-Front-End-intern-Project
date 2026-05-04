@@ -1,7 +1,7 @@
 /* ============================================================
-   styles.css — FIGURA
-   Task 2: CSS styling (colors, fonts, layout)
-   Task 3: Responsive design via media queries
+   Main stylesheet for FIGURA
+   I kept all page styling in one file so it is easier to check
+   during the internship review.
    ============================================================ */
 
 /* ── Variables ── */
@@ -351,7 +351,7 @@ button { cursor: pointer; }
 }
 .fig-collection-card:hover .fig-collection-link { border-color: #fff; }
 
-/* ── Theme Switcher (Task 4) ── */
+/* ── Theme Switcher ── */
 .bg-switcher-wrap { text-align: center; padding: 60px 0 20px; }
 .theme-btn {
   padding: 10px 24px; border: 0.5px solid var(--fig-border);
@@ -360,7 +360,7 @@ button { cursor: pointer; }
 }
 .theme-btn:hover { background: var(--fig-black); color: var(--fig-white); }
 
-/* ── Contact Form (Task 6) ── */
+/* ── Contact Form ── */
 .fig-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fig-muted); }
 .fig-input {
   border: 0.5px solid var(--fig-border); border-radius: 0;
@@ -666,7 +666,9 @@ button { cursor: pointer; }
 }
 
 /* ============================================================
-   Task 3: Responsive Media Queries
+   Responsive Media Queries
+   Some spacing and grid values are adjusted here because the
+   desktop layout became too tight on smaller screens.
    ============================================================ */
 
 /* Tablet */

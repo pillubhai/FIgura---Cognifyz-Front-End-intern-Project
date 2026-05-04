@@ -110,7 +110,8 @@ document.querySelectorAll(".theme-btn").forEach(btn => {
   });
 });
 
-// Load all products (products.html)
+// Products page API work
+// I used async/await here because it made the Fetch API flow easier to read.
 async function loadProducts() {
   const grid = document.getElementById("apiProductGrid");
   if (!grid) return;
@@ -128,6 +129,8 @@ async function loadProducts() {
     function renderProducts() {
       grid.innerHTML = "";
       let filtered = currentCat === "all" ? [...products] : products.filter(p => p.category === currentCat);
+
+      // Sorting and filtering happen on the same product array after the API response.
       if (currentSort === "low")    filtered.sort((a, b) => a.price - b.price);
       if (currentSort === "high")   filtered.sort((a, b) => b.price - a.price);
       if (currentSort === "rating") filtered.sort((a, b) => b.rating.rate - a.rating.rate);
@@ -196,7 +199,7 @@ async function loadProducts() {
 
 loadProducts();
 
-// New arrivals (index.html)
+// Home page new arrivals
 async function loadNewArrivals() {
   const grid = document.getElementById("newArrivalsGrid");
   if (!grid) return;
