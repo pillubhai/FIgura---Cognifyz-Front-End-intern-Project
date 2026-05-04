@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIGURA — Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h2 class="mt-5">Login</h2>
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control" id="email" required>
-                <div class="invalid-feedback">Please enter a valid email address.</div>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" required>
-                <div class="invalid-feedback">Please enter your password.</div>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-    </div>
 
-    <script>
-        // Form validation
-        (function () {
-            'use strict';
-            var forms = document.querySelectorAll('.needs-validation');
-            Array.from(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        })();
-    </script>
+  <nav class="fig-nav" id="mainNav">
+    <a href="index.html" class="fig-logo">Figura</a>
+    <ul class="fig-nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="fig-nav-actions">
+      <button class="fig-cart-btn" id="cartBtn" aria-label="Cart">🛍
+        <span class="fig-cart-count" id="cartCount">0</span>
+      </button>
+      <a href="login.html" class="auth-link active">Login</a>
+      <a href="signup.html" class="auth-link">Sign Up</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <h1 class="auth-title">Welcome Back</h1>
+      <p class="auth-sub">Login to your Figura account</p>
+
+      <form id="loginForm" novalidate>
+        <div class="mb-3">
+          <label class="fig-label">Email Address</label>
+          <input type="email" id="loginEmail" class="fig-input form-control" placeholder="jane@example.com" />
+          <div class="fig-error" id="loginEmailErr"></div>
+        </div>
+        <div class="mb-4">
+          <label class="fig-label">Password</label>
+          <input type="password" id="loginPassword" class="fig-input form-control" placeholder="••••••••" />
+          <div class="fig-error" id="loginPasswordErr"></div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <label class="small text-muted">
+            <input type="checkbox" class="me-1" /> Remember me
+          </label>
+          <a href="forgot-password.html" class="small" style="color:var(--fig-warm);">Forgot Password?</a>
+        </div>
+        <button type="submit" class="hero-cta w-100 justify-content-center">Login</button>
+        <div id="loginSuccess" class="fig-success mt-3" style="display:none;">✓ Logged in successfully!</div>
+      </form>
+
+      <p class="text-center mt-4 small text-muted">
+        Don't have an account? <a href="signup.html" style="color:var(--fig-warm);">Sign Up</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="fig-footer mt-5">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-4">
+      <span class="fig-logo" style="font-size:18px;">Figura</span>
+      <p class="mb-0 text-muted small">© 2025 Figura. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
