@@ -624,6 +624,7 @@ button { cursor: pointer; }
   border-top: 0.5px solid var(--fig-border);
   background: var(--fig-cream);
 }
+.creator-section .creator-linkedin { display: inline-block; margin: 0 12px; }
 .creator-label {
   font-size: 11px;
   letter-spacing: 0.2em;
